@@ -1,0 +1,106 @@
+[
+  {
+    "candidate_id": "P2-C01",
+    "method": "full",
+    "learning_rate": 1e-06,
+    "effective_batch_size": 16,
+    "weight_decay": 0.1,
+    "epochs": 2,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C02",
+    "method": "full",
+    "learning_rate": 1e-06,
+    "effective_batch_size": 32,
+    "weight_decay": 0.1,
+    "epochs": 3,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C03",
+    "method": "full",
+    "learning_rate": 3e-06,
+    "effective_batch_size": 16,
+    "weight_decay": 0.1,
+    "epochs": 2,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C04",
+    "method": "full",
+    "learning_rate": 3e-06,
+    "effective_batch_size": 32,
+    "weight_decay": 0.1,
+    "epochs": 3,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C05",
+    "method": "lora",
+    "learning_rate": 1e-06,
+    "effective_batch_size": 16,
+    "weight_decay": 0.01,
+    "epochs": 2,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C06",
+    "method": "lora",
+    "learning_rate": 1e-06,
+    "effective_batch_size": 32,
+    "weight_decay": 0.01,
+    "epochs": 3,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C07",
+    "method": "lora",
+    "learning_rate": 3e-06,
+    "effective_batch_size": 16,
+    "weight_decay": 0.01,
+    "epochs": 2,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  },
+  {
+    "candidate_id": "P2-C08",
+    "method": "lora",
+    "learning_rate": 3e-06,
+    "effective_batch_size": 32,
+    "weight_decay": 0.01,
+    "epochs": 3,
+    "stages": {
+      "smoke_steps": 5,
+      "short_steps": 30,
+      "full_steps": 120
+    }
+  }
+]

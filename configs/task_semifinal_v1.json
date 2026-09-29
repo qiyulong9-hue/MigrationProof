@@ -1,0 +1,39 @@
+{
+  "schema_version": "migrationproof.task.v1",
+  "task_id": "qwen35-08b-ascend-semifinal-20260914-v1",
+  "model": {
+    "name": "Qwen3.5-0.8B",
+    "source": "/home/89b0d3e7cd994caa/migrationproof_qwen35_20260716_01/models/Qwen3.5-0.8B-dcp-v1/release"
+  },
+  "ascend": {
+    "device_model": "Ascend910B4-1",
+    "device_count": 2,
+    "cann_version": "8.2.RC1",
+    "baseline_config": "runs/semifinal_b4_baseline_20260914_145558/config.yaml",
+    "optimized_config": "runs/semifinal_b4_optimized_20260914_150347/config.yaml"
+  },
+  "dataset": {
+    "name": "MigrationProof-Bench",
+    "version": "v0.3",
+    "task_type": "classification",
+    "test_split": "test-seed42"
+  },
+  "accuracy_gate": {
+    "metric": "decision_accuracy",
+    "minimum": 0.90,
+    "max_drop_from_reference": 0.01
+  },
+  "performance_gate": {
+    "primary_metric": "throughput",
+    "minimum_improvement_percent": 5.0,
+    "warmup_iterations": 1,
+    "repetitions": 20,
+    "global_batch_size": 8
+  },
+  "evidence_policy": {
+    "require_sha256": true,
+    "require_same_protocol": true,
+    "allow_historical_accuracy": true,
+    "historical_accuracy_must_match_model_and_dataset": true
+  }
+}
