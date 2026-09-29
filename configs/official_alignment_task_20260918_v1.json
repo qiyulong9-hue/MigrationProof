@@ -1,0 +1,42 @@
+{
+  "schema_version": "migrationproof.official-task.v1",
+  "task_id": "qwen35-08b-official-ascendc-triton-20260918-v1",
+  "model": {
+    "name": "Qwen3.5-0.8B",
+    "hf_path": "/home/89b0d3e7cd994caa/migrationproof_qwen35_20260716_01/models/Qwen3.5-0.8B",
+    "dcp_path": "/home/89b0d3e7cd994caa/migrationproof_qwen35_20260716_01/models/Qwen3.5-0.8B-dcp-v1"
+  },
+  "framework": {
+    "required_release": "26.1.0",
+    "official_archive": "MindSpeed-MM仓的代码.rar"
+  },
+  "dataset": {
+    "name": "COCO2017+LLaVA-Instruct-150K",
+    "dataset_dir": "/home/89b0d3e7cd994caa/migrationproof_qwen35_20260716_01/data/official_coco_v1/dataset",
+    "annotation_path": "/home/89b0d3e7cd994caa/migrationproof_qwen35_20260716_01/data/official_coco_v1/dataset/annotations_slim.json",
+    "cutoff_len": 1024,
+    "shuffle": false
+  },
+  "training": {
+    "device_count": 2,
+    "micro_batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "global_batch_size": 8,
+    "seed": 42,
+    "lr": 1e-5,
+    "lr_decay_style": "cosine",
+    "lr_warmup_ratio": 0.1,
+    "train_iters": 100
+  },
+  "accuracy_gate": {
+    "max_last_10_mean_loss_relative_difference": 0.01,
+    "max_per_step_loss_relative_difference": 0.02,
+    "minimum_loss_curve_pearson": 0.99
+  },
+  "performance_gate": {
+    "warmup_iterations": 1,
+    "measured_iterations": 20,
+    "independent_pairs": 3
+  }
+}
+
