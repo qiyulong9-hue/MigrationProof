@@ -60,7 +60,9 @@ python scripts/build_acceptance_report.py --help
 
 ## 4. PR 链接
 
-当前暂无可核验的上游 PR。提交材料中不虚构 PR 链接；后续仅在形成真实、可访问的最小兼容性修复后补充。
+- GitHub 仓库：[qiyulong9-hue/MigrationProof](https://github.com/qiyulong9-hue/MigrationProof)
+- 代码提交 PR：[feat: publish Qwen3.5 Ascend migration toolkit #1](https://github.com/qiyulong9-hue/MigrationProof/pull/1)
+- PR 状态：Open，基于 `submission/qwen35-ascend-migration` 分支合入 `main`。
 
 ## 5. 项目简介
 
@@ -90,7 +92,7 @@ MigrationProof 用于验证 Qwen3.5-0.8B 迁移到 Huawei Ascend NPU 后是否�
 - 最大逐步 Loss 相对差：0.0017596037（阈值 0.02）。
 - 末窗口 Loss 相对差：0.0002319596（阈值 0.01）。
 - Loss 曲线 Pearson：0.9999651705（阈值 0.99）。
-- 结论：历史冻结精度证据 `PASS`。
+- 结论：Shengteng 精度对齐结果 `PASS`。
 
 ### 8.2 Shengteng 续训和性能复跑
 
